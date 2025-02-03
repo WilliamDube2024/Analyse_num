@@ -6,6 +6,7 @@ from suiteSn import suiteSn
 equipe = 14
 
 a = np.full((6, 1), 1)
+print(a)
 
 b = np.arange(1, 7)
 
