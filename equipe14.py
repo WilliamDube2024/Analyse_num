@@ -66,4 +66,10 @@ def f(x) :
     f = -0.5*x**2 + np.exp(x) + np.sin(x)
     return f
 
-print(f(1))
+x = np.linspace(0, 1, 101)
+
+plt.plot(x, f(x))
+plt.title('F(x)')
+plt.show()
+
+#Rapport mettre figures
