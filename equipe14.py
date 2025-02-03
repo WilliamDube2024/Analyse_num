@@ -5,10 +5,14 @@ from suiteSn import suiteSn
 
 equipe = 14
 
-a = np.full((6, 1), 1)
-print(a)
 
+#a, le vecteur colonne de longueur 6 dont toutes les composantes valent 1.
+a = np.full((6, 1), 1)
+# print(a)
+
+#b, le vecteur ligne de longueur 6 dont les composantes valent 1, 2, ..., 6 (en uneseule ligne).
 b = np.arange(1, 7)
+print(b)
 
 c = a.reshape(1, 6)
 
