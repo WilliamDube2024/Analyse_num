@@ -56,3 +56,14 @@ M_prime = M.T
 N = np.dot(np.linalg.inv(M), M_prime)
 print(np.dot(M, N)) 
 print(M_prime)
+
+plt.matshow(N)
+plt.title('Matrice N')
+plt.show()
+
+
+def f(x) :
+    f = -0.5*x**2 + np.exp(x) + np.sin(x)
+    return f
+
+print(f(1))
