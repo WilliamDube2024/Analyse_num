@@ -1,7 +1,7 @@
 import numpy as np
 from math import e
 import matplotlib.pyplot as plt
-from suiteSn import suiteSn
+# from suiteSn import suiteSn
 
 equipe = 14
 
@@ -14,7 +14,10 @@ a = np.full((6, 1), 1)
 b = np.arange(1, 7)
 print(b)
 
+
+#c, le vecteur ligne de longueur 6 dont toutes les composantes valent 1. On obtiendra c à partir de a grâce à la transposition
 c = a.reshape(1, 6)
+# print(c)
 
 d = equipe * c
 
