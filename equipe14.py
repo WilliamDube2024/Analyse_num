@@ -3,6 +3,7 @@ from math import e
 import matplotlib.pyplot as plt
 from suiteSn import suiteSn
 
+equipe = 14
 
 a = np.full((6, 1), 1)
 
@@ -10,7 +11,7 @@ b = np.arange(1, 7)
 
 c = a.reshape(1, 6)
 
-d = equipe_num * c
+d = equipe * c
 
 I = np.identity(6)
 
