@@ -24,23 +24,24 @@ print("d", d)
 
 #I, matrice identité de taille 6 × 6.
 I = np.identity(6)
-print(I)
+print('I', I)
 
 #J, matrice de taille 6 × 6 dont toutes les composantes valent 1.
 J = np.full((6, 6), 1)
-print(J)
+print('J', J)
 
 #K, la matrice de taille 6 × 6 dont la diagonale est le vecteur b
 K = np.diag(b)
-print(K)
+print('K', K)
 
 #L, la matrice de taille 6 × 6
 L = 55 * I - J + 2 * np.dot(a, c)
-print(L)
+print('L', L)
 
 #M, matrice obtenue en remplaçant la 1ère colonne de K par a.
-M = K.copy()
-M[:, 0] = a.flatten()
+M = K
+M[:, 0] = a.reshape(1, 6)
+print('M', M)
 
 #dd, le déterminant de M (utiliser la commande np.linalg.det).
 dd = np.linalg.det(M)
@@ -49,9 +50,9 @@ print("dd", dd)
 #x, la solution de M x= a, sans calculer l'inverse de L 
 x = np.linalg.solve(M, a)
 print("x", x)
+print(np.dot(M, x))
 
-M_transpose = M.T
-N = np.linalg.solve(M, M_transpose)
-
-
-print(a, b, c)
+M_prime = M.T
+N = np.dot(np.linalg.inv(M), M_prime)
+print(np.dot(M, N)) 
+print(M_prime)
