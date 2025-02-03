@@ -1,13 +1,18 @@
 import numpy as np
 from math import e
 import matplotlib.pyplot as plt
-#from suiteSn import suiteSn
+# from suiteSn import suiteSn
 
+#a, le vecteur colonne de longueur 6 dont toutes les composantes valent 1.
 a = np.full((6, 1), 1)
 
+#b, le vecteur ligne de longueur 6 dont les composantes valent 1, 2, ..., 6 (en uneseule ligne).
 b = np.arange(1, 7)
 
+
+#c, le vecteur ligne de longueur 6 dont toutes les composantes valent 1. On obtiendra c à partir de a grâce à la transposition
 c = a.reshape(1, 6)
+# print(c)
 
 d = equipe_num * c
 
