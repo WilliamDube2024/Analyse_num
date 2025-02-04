@@ -1,7 +1,7 @@
 import numpy as np
 from math import e
 import matplotlib.pyplot as plt
-# from suiteSn import suiteSn
+from suiteSn import suiteSn
 
 equipe = 14
 
@@ -70,6 +70,15 @@ x = np.linspace(0, 1, 101)
 
 plt.plot(x, f(x))
 plt.title('F(x)')
+plt.show()
+
+
+S19 = suiteSn(19)
+#x_int = np.linspace(0, 19, 18)
+plt.plot(S19)
+plt.title('Intégrale (x**n)*(e**x) dx bornée en [0,1]')
+plt.xlabel('Valeur de n')
+plt.ylabel("Résultat de l'intégrale")
 plt.show()
 
 #Rapport mettre figures
