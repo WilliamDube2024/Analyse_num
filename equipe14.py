@@ -93,10 +93,13 @@ def calcul(n, x):
     valeurs = [10**-i for i in range(1, n+1)]
     tableau = np.array(valeurs)
     erreurs = Opération_dangereuse(x, tableau)
-    return tableau, erreurs
+    return (tableau, erreurs)
 
 
-plt.loglog(calcul(12, 0))
+plt.loglog(calcul(12, 0)[0], calcul(12, 0)[1])
+plt.xlabel('Valeurs de h')
+plt.ylabel("Valeur d'erreur")
+plt.title("Valeur de l'erreur en fonction des valeurs de h")
 plt.show()
 
 #Rapport mettre figures
