@@ -83,19 +83,19 @@ plt.show()
 
 #Rapport mettre figures
 
-def Taylor(n, fonction, xo):
-    p_de_x = 0
-    p_de_x += xo
-    dérivées = [fonction]
-    for i in range(n):
-        dérivées.append(np.gradient(dérivées[-1], x))
+def poly_taylor(x):
+    return 1+2*x
 
-    print(dérivées)
+Domaine = np.array([10**-1])
+for i in range(2,6):
+    Domaine = np.append(Domaine, 10**(-i))
+print(Domaine)
 
-    # degré 1
-    p_de_x += 0
+E_de_x = abs(f(Domaine)-poly_taylor(Domaine))
+print(E_de_x)
 
-f = f(x)
-
-Taylor(2, f, 0)
-        
+plt.loglog(Domaine, E_de_x)
+plt.title("Erreur en fonction de x")
+plt.xlabel("Valeurs de x")
+plt.ylabel("f(x) moins le polynôme de Taylor de dégré 2")
+plt.show()
