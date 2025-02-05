@@ -82,3 +82,20 @@ plt.ylabel("Résultat de l'intégrale")
 plt.show()
 
 #Rapport mettre figures
+
+def Taylor(n, fonction, xo):
+    p_de_x = 0
+    p_de_x += xo
+    dérivées = [fonction]
+    for i in range(n):
+        dérivées.append(np.gradient(dérivées[-1], x))
+
+    print(dérivées)
+
+    # degré 1
+    p_de_x += 0
+
+f = f(x)
+
+Taylor(2, f, 0)
+        
