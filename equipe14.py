@@ -89,10 +89,10 @@ def poly_taylor(x):
 Domaine = np.array([10**-1])
 for i in range(2,6):
     Domaine = np.append(Domaine, 10**(-i))
-print(Domaine)
+# print(Domaine)
 
 E_de_x = abs(f(Domaine)-poly_taylor(Domaine))
-print(E_de_x)
+# print(E_de_x)
 
 plt.loglog(Domaine, E_de_x)
 plt.title("Erreur en fonction de x")
