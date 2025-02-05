@@ -81,6 +81,24 @@ plt.xlabel('Valeur de n')
 plt.ylabel("Résultat de l'intégrale")
 plt.show()
 
+
+def Opération_dangereuse(x, h):
+    f = -0.5*x**2 + np.exp(x) + np.sin(x)
+    f_h = -0.5*(x + h)**2 + np.exp(x + h) + np.sin(x + h)
+    f_prime = -x + np.exp(x) + np.cos(x)
+    D = (f_h - f)/h
+    return np.abs(f_prime - D)
+
+def calcul(n, x):
+    valeurs = [10**-i for i in range(1, n+1)]
+    tableau = np.array(valeurs)
+    erreurs = Opération_dangereuse(x, tableau)
+    return tableau, erreurs
+
+
+plt.loglog(calcul(12, 0))
+plt.show()
+
 #Rapport mettre figures
 
 def Taylor(n, fonction, xo):
