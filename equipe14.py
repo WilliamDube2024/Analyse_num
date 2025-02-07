@@ -39,7 +39,7 @@ L = 55 * I - J + 2 * np.dot(a, c)
 print('L', L)
 
 #M, matrice obtenue en remplaçant la 1ère colonne de K par a.
-M = K
+M = 1*K
 M[:, 0] = a.reshape(1, 6)
 print('M', M)
 
@@ -97,7 +97,7 @@ def calcul(n, x):
     return (tableau, erreurs)
 
 
-plt.loglog(calcul(12, 0)[0], calcul(12, 0)[1])
+plt.loglog(calcul(6, 0)[0], calcul(6, 0)[1])
 plt.xlabel('Valeurs de h')
 plt.ylabel("Valeur d'erreur")
 plt.title("Valeur de l'erreur en fonction des valeurs de h")
