@@ -59,6 +59,7 @@ print(M_prime)
 
 plt.matshow(N)
 plt.title('Matrice N')
+plt.colorbar()
 plt.show()
 
 
