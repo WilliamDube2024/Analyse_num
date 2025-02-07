@@ -69,11 +69,12 @@ def f(x) :
 
 x = np.linspace(0, 1, 101)
 
+plt.figure(num=2)
 plt.plot(x, f(x))
 plt.title('F(x)')
 plt.show()
 
-
+plt.figure(num=3)
 S19 = suiteSn(19)
 #x_int = np.linspace(0, 19, 18)
 plt.plot(S19)
@@ -96,7 +97,7 @@ def calcul(n, x):
     erreurs = Opération_dangereuse(x, tableau)
     return (tableau, erreurs)
 
-
+plt.figure(num=4)
 plt.loglog(calcul(6, 0)[0], calcul(6, 0)[1])
 plt.xlabel('Valeurs de h')
 plt.ylabel("Valeur d'erreur")
@@ -115,6 +116,7 @@ print(Domaine)
 E_de_x = abs(f(Domaine)-poly_taylor(Domaine))
 # print(E_de_x)
 
+plt.figure(num=5)
 plt.loglog(Domaine, E_de_x)
 plt.title("Erreur en fonction de x en échelle logarithmique")
 plt.xlabel("Valeurs de x")
