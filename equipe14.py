@@ -111,7 +111,7 @@ def poly_taylor(x):
 
 Domaine = np.array([10**-1, 5*(10**-2), 10**-2, 5*(10**-3), 10**-3])
 
-print(Domaine)
+# print(Domaine)
 
 E_de_x = abs(f(Domaine)-poly_taylor(Domaine))
 # print(E_de_x)
